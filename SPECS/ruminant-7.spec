@@ -7,10 +7,10 @@ Summary:          ruminant for RHEL/CENTOS %{os_rel}
 BuildArch:        %{arch}
 Group:            Application/ETL
 License:          MIT
-URL:              https://github.com/unprofession-al/bpmon
+URL:              https://github.com/unprofession-al/ruminant
 BuildRoot:        %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
-Source1:        bpmon.bin
+Source1:        ruminant.bin
 
 %define appdir /usr/bin/
 
