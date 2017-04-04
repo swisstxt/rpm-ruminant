@@ -16,7 +16,6 @@ clean:
 	rm -rf ./SOURCES/ruminant.bin
 	mkdir -p ./rpmbuild/SPECS/ ./rpmbuild/SOURCES/
 	mkdir -p ./SPECS ./SOURCES/src ./SOURCES/bin ./SOURCES/pkg
-	go get github.com/tools/godep
 
 get-src:
 	echo ${GOPATH}
@@ -26,7 +25,7 @@ tidy-src:
 	rm -rf ./SOURCES/src ./SOURCES/bin ./SOURCES/pkg
 
 build-src: get-src
-	cd ./SOURCES/src/github.com/unprofession-al/ruminant; godep restore; godep go install ./...
+	cd ./SOURCES/src/github.com/unprofession-al/ruminant; go install ./...
 	cp ./SOURCES/bin/ruminant ./SOURCES/ruminant.bin
 
 build: clean build-src tidy-src
