@@ -1,5 +1,5 @@
 HOME=$(shell pwd)
-VERSION="2"
+VERSION="3"
 RELEASE=$(shell /opt/buildhelper/buildhelper getgitrev .)
 NAME=ruminant
 SPEC=$(shell /opt/buildhelper/buildhelper getspec ${NAME})
